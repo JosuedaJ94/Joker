@@ -1,0 +1,13 @@
+form {
+  display: block;
+  flex-direction: vertical;
+}
+
+.form {
+  width: 100%;
+  display: block;
+}
+
+#cat-check {
+  
+}

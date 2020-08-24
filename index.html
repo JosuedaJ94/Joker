@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Joker</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <h1>Joker</h1>
+      <h2>joke generator</h2>
+    </header>
+
+    <main>
+      <div class="form">
+        <fieldset>
+          <legend>Care for a joke?</legend>
+          <form>
+            <fieldset id="cat-check">
+              <label for="category">Category: </label>
+              <input id="programming" value="Programming" type="checkbox">Programming</input>
+              <input id="misc" value="Miscellaneous" type="checkbox">Misc</input>
+              <input id="dark" value="Dark" type="checkbox">Dark Humor</input>
+              <input id="pun" value="Pun" type="checkbox">Punny</input>
+            </fieldset>
+
+            <fieldset>
+              <label for="flags">Flags: </label>
+              <input id="religion" value="religious" type="checkbox">Religion</input>
+              <input id="political" type="checkbox" value="political">Politics</input>
+              <input id="racism" type="checkbox" value="racist">Racism</input>
+              <input id="sexist" type="checkbox" value="sexist">Sexist</input>
+            </fieldset>
+
+            <fieldset>
+            <label for="search">Search phrase: </label>
+            <input id="search" type="text">
+            <button type="submit">Search</button>
+            </fieldset>
+
+            
+          </form>
+        </fieldset>
+      </div>
+
+      <div class="joke-display hidden">
+        <fieldset>
+          <div class="part1"></div>
+        </fieldset>
+
+        <fieldset>
+          <div class="part2"></div>
+        </fieldset>
+      </div>
+    </main>
+
+    <footer>
+
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
