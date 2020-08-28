@@ -8,55 +8,92 @@
   </head>
   <body>
     <header>
-      <h1>Joker</h1>
-      <h2>joke generator</h2>
+      <img id="banner" src="images/banner.jpg" alt="banner pic"/>
+      <h2><strong>Joke Generator</strong></h2>
     </header>
 
     <main>
       <div class="form">
-        <fieldset>
-          <legend>Care for a joke?</legend>
-          <form>
-            <fieldset id="cat-check">
-              <label for="category">Category: </label>
-              <input id="programming" value="Programming" type="checkbox">Programming</input>
-              <input id="misc" value="Miscellaneous" type="checkbox">Misc</input>
-              <input id="dark" value="Dark" type="checkbox">Dark Humor</input>
-              <input id="pun" value="Pun" type="checkbox">Punny</input>
+        <a href="#part1"><button type="button" id="quick-joke">Random Joke</button></a>
+        <form>
+        <fieldset id="outside-field">
+          <legend><strong>Optional Filters</strong></legend>
+            <div id="cat-check">
+              <legend><strong>Categories</strong></legend>
+              <br/>
+              <div class="flex-container">
+              <div class="options">
+                <input id="programming" value="Programming" type="checkbox"/>
+                <label for="programming">Programming</label>
+              </div>
+
+              <div class="options">
+                <input id="misc" value="Miscellaneous" type="checkbox"/>
+                <label for="misc">Misc</label>
+              </div>
+
+              <div class="options">
+                <input id="dark" value="Dark" type="checkbox"/>
+                <label for="dark">Dark Humor</label>
+              </div>
+
+              <div class="options">
+                <input id="pun" value="Pun" type="checkbox"/>
+                <label for="pun">Punny</label>
+              </div>
+              </div>
+            </div>
+
+            <div id="flag-check">
+              <legend><strong>Flags</strong></legend>
+              <br/>
+              <div class="flex-container">
+              <div class="flags">
+                <input id="religion" value="religious" type="checkbox"/>
+                <label for="religion">Religion</label>
+              </div>
+
+              <div class="flags">
+                <input id="political" type="checkbox" value="political"/>
+                <label for="political">Politics</label>
+              </div>
+
+              <div class="flags">
+                <input id="racism" type="checkbox" value="racist"/>
+                <label for="racism">Racism</label>
+              </div>
+
+              <div class="flags">
+                <input id="sexist" type="checkbox" value="sexist"/>
+                <label for="sexist">Sexist</label>
+              </div>
+              </div>
+            </div>
+
+            <fieldset class="phrase-search">
+              <legend><strong>Search phrase</strong></legend>
+              <div class="phrase-search">
+                <input id="search" type="text"/>
+                <button type="submit">Search</button>
+              </div>
             </fieldset>
 
-            <fieldset>
-              <label for="flags">Flags: </label>
-              <input id="religion" value="religious" type="checkbox">Religion</input>
-              <input id="political" type="checkbox" value="political">Politics</input>
-              <input id="racism" type="checkbox" value="racist">Racism</input>
-              <input id="sexist" type="checkbox" value="sexist">Sexist</input>
-            </fieldset>
-
-            <fieldset>
-            <label for="search">Search phrase: </label>
-            <input id="search" type="text">
-            <button type="submit">Search</button>
-            </fieldset>
-
-            
-          </form>
         </fieldset>
+        </form>
       </div>
 
       <div class="joke-display hidden">
-        <fieldset>
-          <div class="part1"></div>
-        </fieldset>
-
-        <fieldset>
+        <section>
+          <div id="part1" class="part1"></div>
           <div class="part2"></div>
-        </fieldset>
+        </section>
       </div>
     </main>
 
     <footer>
-
+      <div>
+        <h4>Created By: Joshua Mora</h4>
+      </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="script.js"></script>

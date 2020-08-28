@@ -1,13 +1,129 @@
+header {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(66, 253, 29);
+  padding-bottom: 10px;
+}
+
+#banner {
+  height: 100%;
+  width: 100%;
+}
+
+h2 {
+  font-family: "Helvetica";
+  color: purple;
+  background-color: rgb(66, 253, 29);
+}
+
+body {
+  text-align: center;
+  background-color: purple;
+}
+
+main {
+  padding: 10px;
+  color: rgb(66, 253, 29);
+}
+
+button {
+  background-color: white;
+}
+
+.options {
+  text-align: left;
+}
+
+.flags {
+  text-align: justify;
+}
+
 form {
-  display: block;
-  flex-direction: vertical;
+  display: flex;
+  text-align: center;
+  width: 100%;
+}
+
+#outside-field {
+  
+  width: 100%;
+  text-align: center;
+}
+
+fieldset {
+  text-align: center;
+  margin: 20px;
 }
 
 .form {
   width: 100%;
-  display: block;
+}
+
+#error {
+  color: red;
+}
+
+h4 {
+  color: white;
 }
 
 #cat-check {
-  
+  margin: 20px;
+  padding: 20px;
+  padding-top: 5px;
+  min-inline-size: min-content;
+  border-width: 2px;
+  border-style: groove;
+  border-color: threedface;
+  border-image: initial;
+  justify-content: center;
+  display: grid;
+}
+
+#flag-check {
+  margin: 20px;
+  padding: 20px;
+  padding-top: 5px;
+  min-inline-size: min-content;
+  border-width: 2px;
+  border-style: groove;
+  border-color: threedface;
+  border-image: initial;
+  justify-content: center;
+  display: grid;
+}
+
+.flex-container {
+  text-align: center;
+}
+
+legend {
+  font-size: 17pt;
+}
+
+/*!--tablet size--*/
+@media all and (min-width: 480px){
+
+.flex-container {
+  display:grid;
+  grid-template-columns: auto auto;
+  grid-row: auto auto;
+  text-align: center;
+  justify-content: center;
+  grid-row-gap: 10px;
+  grid-column-gap: 20px;
+}
+
+}
+
+@media all and (min-width: 800px) {
+  .flex-container {
+  display:grid;
+  grid-template-columns: auto auto auto auto;
+  grid-row: auto auto auto auto;
+  text-align: center;
+  justify-content: center;
+  grid-row-gap: 10px;
+  grid-column-gap: 20px;
+}
 }

@@ -63,6 +63,12 @@ function searchForJokes(){
     
     retrieveJoke(url);
   });
+
+  $("#quick-joke").click(event => {
+    var endpoint = "https://sv443.net/jokeapi/v2/joke/";
+    endpoint = endpoint + "Any";
+    retrieveJoke(endpoint);
+  });
 }
 
 function completeURL(endpoint, cats, flags, phrase){
@@ -98,11 +104,21 @@ function completeURL(endpoint, cats, flags, phrase){
 }
 
 function retrieveJoke(url) {
-  fetch(url).then(response => response.json()).then(responseJson => displayJoke(responseJson));
+  fetch(url).then(response => response.json()).then(responseJson => displayJoke(responseJson))//.catch(error => alert("phrase not found, please try again"));
 }
 
 function displayJoke(response) {
   console.log(response);
+
+  //check for error
+  if(response.error == true) {
+    $(".part1").html(`<h3 id="error">Phrase not found, please try again.</h3>`);
+    $(".part2").empty();
+    return error;
+  }
+  $(".part1").empty();
+  $(".part2").empty();
+
   if(response.type == 'single') {
     $('.part1').html(`<div class="part1">
     <h3>${response.joke}</h3>
@@ -112,7 +128,7 @@ function displayJoke(response) {
       <h3>${response.setup}</h3>
       </div>`);
 
-    $('.part2').html(`<div class="part2">
+    $('.part2').html(`<div class="part2"><hr>
       <h3>${response.delivery}</h3>
       </div>`);
   }
