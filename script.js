@@ -1,6 +1,8 @@
+//handles form and creates the endpoint
 function searchForJokes(){
   $("form").submit(event => {
     event.preventDefault();
+    
     //handle categories
     var cats = [];
     var count = 0;
@@ -64,6 +66,7 @@ function searchForJokes(){
     retrieveJoke(url);
   });
 
+  //no filters
   $("#quick-joke").click(event => {
     var endpoint = "https://sv443.net/jokeapi/v2/joke/";
     endpoint = endpoint + "Any";
@@ -71,6 +74,7 @@ function searchForJokes(){
   });
 }
 
+//finalizes the url to fetch from
 function completeURL(endpoint, cats, flags, phrase){
 
   if(cats[0] == "Any") {
@@ -103,13 +107,13 @@ function completeURL(endpoint, cats, flags, phrase){
   }
 }
 
+//fetch a joke
 function retrieveJoke(url) {
-  fetch(url).then(response => response.json()).then(responseJson => displayJoke(responseJson))//.catch(error => alert("phrase not found, please try again"));
+  fetch(url).then(response => response.json()).then(responseJson => displayJoke(responseJson));
 }
 
+//display the retrieved data
 function displayJoke(response) {
-  console.log(response);
-
   //check for error
   if(response.error == true) {
     $(".part1").html(`<h3 id="error">Phrase not found, please try again.</h3>`);

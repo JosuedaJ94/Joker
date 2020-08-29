@@ -10,7 +10,7 @@ header {
   width: 100%;
 }
 
-h2 {
+h1 {
   font-family: "Helvetica";
   color: purple;
   background-color: rgb(66, 253, 29);
@@ -19,6 +19,7 @@ h2 {
 body {
   text-align: center;
   background-color: purple;
+  margin: 0;
 }
 
 main {
@@ -63,7 +64,7 @@ fieldset {
   color: red;
 }
 
-h4 {
+h2 {
   color: white;
 }
 
@@ -72,10 +73,8 @@ h4 {
   padding: 20px;
   padding-top: 5px;
   min-inline-size: min-content;
-  border-width: 2px;
-  border-style: groove;
-  border-color: threedface;
-  border-image: initial;
+  
+  
   justify-content: center;
   display: grid;
 }
@@ -85,20 +84,36 @@ h4 {
   padding: 20px;
   padding-top: 5px;
   min-inline-size: min-content;
-  border-width: 2px;
-  border-style: groove;
-  border-color: threedface;
-  border-image: initial;
+  
   justify-content: center;
   display: grid;
 }
 
 .flex-container {
   text-align: center;
+  min-width: 150px;
 }
 
-legend {
+legend, label {
   font-size: 17pt;
+}
+
+.phrase-search {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  margin: 0 auto;
+  height: 130px;
+  justify-content: space-around;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 20px 0;
+}
+
+#search {
+  margin-top: 20px;
 }
 
 /*!--tablet size--*/
